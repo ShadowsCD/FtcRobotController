@@ -75,7 +75,7 @@ public class ConceptNullOp extends OpMode {
   @Override
   public void loop() {
     telemetry.addData("Status", "Run Time: " + runtime.toString());
-    telemetry.addData("gamepad1 a", gamepad1.a):
+    telemetry.addData("gamepad1 a", gamepad1.a);
   }
 
   /**
