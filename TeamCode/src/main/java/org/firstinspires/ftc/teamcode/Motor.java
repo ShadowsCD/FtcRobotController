@@ -80,16 +80,19 @@ public class Motor extends LinearOpMode {
         // Scan servo till stop pressed.
         while(opModeIsActive()){
         if (gamepad1.y) {
-            power+= .1;
-            motorEx.setTargetPosition((int)(1000*power));
+            power = 1;
+            motorEx.setTargetPosition((int)(2000*power));
             motorEx.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
         }
         if(gamepad1.a){
-            power-=.1;
+            power = -1;
+            motorEx.setTargetPosition((int)(2000*power));
+            motorEx.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         }
         if(gamepad1.right_bumper){
             power=0;
+
         }
             if (gamepad1.x) {
                 // Keep stepping up until we hit the max value.
